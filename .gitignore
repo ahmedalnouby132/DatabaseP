@@ -1,3 +1,4 @@
 node_modules/
 ./Database/*
 ./Database/db.js
+Database/db.js
