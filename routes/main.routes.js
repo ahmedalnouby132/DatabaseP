@@ -1,16 +1,14 @@
 const express = require("express");
 const route = express.Router();
-const path = require("path");
 const bodyParser = require('body-parser')
 
 route.use(bodyParser.urlencoded({extended:false}))
 
-route.get("/login", (req, res) => {
-  res.sendFile(path.join(__dirname, "..", "views", "home.html"));
-});
+const loginRoute =require("./login.routes")
+const signupRoute = require('./signup.routes')
 
-route.post("/login", async (req, res) => {
+route.use(loginRoute)
+route.use(signupRoute)
 
-});
 
 module.exports = route;
