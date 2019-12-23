@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>addpatient</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/homepage.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div class="jumbotron">
+      <h1>Add doctor</h1>
+    </div>
+    <div id="wrapper">
+        <div class="overlay"></div>
+
+        <!-- Sidebar -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+            <ul class="nav sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                       Webseotips
+                    </a>
+                </li>
+                <li>
+                    <a href="homepage.html">Dashboard</a>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Department <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li class="dropdown-header">Dropdown heading</li>
+                    <li><a href="add_department.html">Add Department</a></li>
+                    <li><a href="departmentList.html">Departments list</a></li>
+                  </ul>
+                </li>
+
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Doctors <span class="caret"></span></a>
+                  <ol class="dropdown-menu" role="menu">
+                    <li class="dropdown-header">Dropdown heading</li>
+                    <li><a href="add_doctor.html">Add Doctor</a></li>
+                    <li><a href="doctorList.html">Doctors List</a></li>
+
+                  </ol>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Nurse <span class="caret"></span></a>
+                  <ol class="dropdown-menu" role="menu">
+                    <li class="dropdown-header">Dropdown heading</li>
+                    <li><a href="add_nurse.html">Add Nurse</a></li>
+                    <li><a href="nurseList.html">Nurses List</a></li>
+
+                  </ol>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">schedule <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li class="dropdown-header">Dropdown heading</li>
+                    <li><a href="#">Add schedule</a></li>
+                    <li><a href="#">schedule list</a></li>
+                  </ul>
+                </li>
+            </ul>
+        </nav>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <!--<button type="button" class="hamburger is-closed" data-toggle="offcanvas">
+                <span class="hamb-top"></span>
+          <span class="hamb-middle"></span>
+        <span class="hamb-bottom"></span>
+            </button> -->
+
+            <button type="button" class="btn btn-lg custom-btn" data-toggle="offcanvas">
+                <i class="fa fa-bars"></i>
+            </button>
+
+            <div class="container">
+              <div class="text-right ">
+                <form class="form-inline">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn1 btn-primary btn-sm" type="submit">Search</button>
+                </form>
+              </div>
+              <br>
+              <div class="panel panel-warning col-lg-14">
+                <div class="panel-heading  col-lg-14">
+                  <h3 class="panel-title"><h3>Add doctor</h3></h3>
+                </div>
+                <br><br>
+                <div class="row ">
+                    <div class="col-sm-offset-1 col-lg-9">
+                        <form>
+                          <div class="form-group row">
+                            <label class="col-sm-2 col-form-label" >First Name</label>
+                            <div class="col-sm-10">
+                              <input type="text" class="form-control" placeholder="First Name" required>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Last Name</label>
+                            <div class="col-sm-10">
+                              <input type="text" class="form-control" placeholder="Last Name" required>
+                            </div>
+                          </div>
+
+                          <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Email</label>
+                            <div class="col-sm-10">
+                            <input type="email" class="form-control" placeholder="Email Address" required>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Password</label>
+                            <div class="col-sm-10">
+                              <input type="password" class="form-control" placeholder="password" required>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Phone No</label>
+                            <div class="col-sm-10">
+                              <input type="tel" class="form-control" placeholder="Phone Number" pattern="[0-9]">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Mobile No</label>
+                            <div class="col-sm-10">
+                              <input type="tel" class="form-control" placeholder="Mobile Noumber" pattern="[0-9]">
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Designation</label>
+                            <div class="col-sm-10">
+                              <input type="text" class="form-control" placeholder="Designation" required>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label  class="col-sm-2 col-form-label">Department</label>
+                            <div class="col-sm-10">
+                            <select class="form-control">
+                              <option selected disabled value="">Choose...</option>
+                              <option value="A-">Microbiology</option>
+                              <option value="B+">Neonatal</option>
+                              <option value="B-">Nephrology</option>
+                              <option value="O+">OR</option>
+                              <option value="O-">Orthopaedics</option>
+                              <option value="A+">Pharmacy</option>
+                              <option value="A+">Radiotherapy</option>
+                              <option value="A+">Rheumatology</option>
+                              <option value="A+">Gynaecology</option>
+                              <option value="A+">Obstetrics</option>
+                              <option value="A+">General Surgery</option>
+                            </select>
+                          </div>
+                          </div>
+
+                          <div class="form-group row">
+                            <label  class="col-sm-2 col-form-label">Gender</label>
+                            <div class="col-sm-10">
+                            <form>
+                              <input class="col-sm-1" type="radio" name="gender" value="male" checked>
+                              <span class="col-sm-1">Male</span>
+                              <input class="col-sm-2"type="radio" name="gender" value="female">
+                              <span class="col-sm-1">Female</span>
+                            </form>
+                          </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Birth Date</label>
+                            <div class="col-sm-10">
+                              <input class="col-sm-3" type="date" name="BirthDate" value="data" lang="en"><span class="col-sm-5 help-block">12/12/2012</span>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label  class="col-sm-2 col-form-label">Blood Group</label>
+                            <div class="col-sm-10">
+                            <select class="form-control">
+                              <option selected disabled value="">Choose...</option>
+                              <option value="A+">A+</option>
+                              <option value="A-">A-</option>
+                              <option value="B+">B+</option>
+                              <option value="B-">B-</option>
+                              <option value="O+">O+</option>
+                              <option value="O-">O-</option>
+                            </select>
+                          </div>
+                          </div>
+
+                          <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Picture</label>
+                            <div class="col-sm-10">
+                            <input  type="file">
+                          </div>
+                          </div>
+
+                          <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Short Biography</label>
+                            <div class="col-sm-10">
+                            <textarea class="form-control" placeholder="Add Message"></textarea>
+                          </div>
+                          </div>
+
+                          <div class=" row text-center ">
+                              <button class="btn btn-success btn-lg">save</button>
+                            <button class="btn btn-lg btn-danger ">Reset</button>
+
+                          </div>
+
+                          <br>
+                          <br> <br> <br><br><br>
+                          </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/homepage.js"></script>
+
+
+
+
+  </body>
+</html>

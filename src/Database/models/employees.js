@@ -16,13 +16,6 @@ const employee = sequelize.define("employee", {
   },
   Fname: Sequelize.STRING,
   email: Sequelize.STRING,
-  Dcode: {
-    type: Sequelize.INTEGER,
-    references: {
-      model: "department",
-      key: "Dcode"
-    }
-  },
   main_salary: Sequelize.INTEGER,
   BDate: Sequelize.DATE,
   noofHours: Sequelize.INTEGER,

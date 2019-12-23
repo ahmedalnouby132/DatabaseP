@@ -2,7 +2,7 @@ const express = require("express");
 
 const signupRoute = express.Router();
 
-const {getSignupPage, register} = require('../server/controller/signup')
+const {getSignupPage, register,addMember} = require('../server/controller/signup')
 
 signupRoute.get("/signup", getSignupPage);
 signupRoute.post("/signup", register);

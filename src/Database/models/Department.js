@@ -15,5 +15,4 @@ const department = sequelize.define('department', {
   },
   NumOfWorkers: Sequelize.INTEGER
 });
-
 module.exports = department;

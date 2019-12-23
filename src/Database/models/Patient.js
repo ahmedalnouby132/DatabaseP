@@ -17,13 +17,6 @@ const Patient = sequelize.define("patient", {
   Fname: Sequelize.STRING,
   Lname: Sequelize.STRING,
   email: Sequelize.STRING,
-  Dcode: {
-    type: Sequelize.INTEGER,
-    references: {
-      model: "department",
-      key: "Dcode"
-    }
-  },
   SDate: Sequelize.DATE,
   BDate: Sequelize.DATE,
   pass: Sequelize.STRING

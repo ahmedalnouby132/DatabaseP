@@ -2,9 +2,24 @@ const employee = require("../services/employee");
 const patient = require("../services/patient");
 const config = require("../../../config/config");
 const path = require("../../util/path");
-
+const bcrypt = require('bcryptjs')
 const getSignupPage = (req, res) => {
   res.sendFile(path.join(path.viewsPath, "registration.html"));
+};
+const addMember = async (req, res) => {
+  try {
+    const email = req.body.email;
+    const pass = req.body.pass;
+    const SSN = req.body.ssn;
+    const Occupation = req.body.Occupation;
+    console.log(email, pass, SSN, Occupation);
+    employee.addEmployee({
+      email: "" + email,
+      pass: "" + pass,
+      SSN: "" + SSN,
+      Occupation: "" + Occupation
+    });
+  } catch (err) {}
 };
 
 async function register(req, res) {
@@ -15,12 +30,18 @@ async function register(req, res) {
     const Occupation = req.body.Occupation;
     let user;
     console.log(email, pass, SSN, Occupation);
-    user = await employee.getEmployeeByID(req.body.id || "");
-    if (!user) throw "already registerd";
-    user = await patient.getPatientByID(req.body.id || "");
-    if (!user) throw "already registerd";
+    user = await employee.getEmployeeByEmail(req.body.email || "");
+    if (user!= null) {throw Error("already registerd");}
+    console.log("1");
+    user = await patient.getPatientByEmail(req.body.email || "");
+    console.log(user,"HI")
+    if (user!= null) {throw Error("already registerd");}
+    console.log("2");
+    console.log(" ");
+    console.log(user, "Hi");
+    let password = await bcrypt.hash(pass, config.saltRounds);
+    console.log("3");
 
-    let password = bcrypt.hashSync(pass, config.saltRounds);
     if (req.Occupation != patient) {
       return employee
         .addEmployee({
@@ -46,4 +67,4 @@ async function register(req, res) {
     });
   }
 }
-module.exports = { getSignupPage, register };
+module.exports = { getSignupPage, register, addMember };

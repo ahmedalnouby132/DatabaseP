@@ -1,9 +1,8 @@
 const Patients = require('../../Database/models/Patient')
 
-const addPatient = user => patient.create(user);
-const getPatientByID = id => patient.findOne({where: {"ID": id}});
-
+const addPatient =async user => await Patients.create(user);
+const getPatientByEmail =async email => await Patients.findOne({where: {"email": email}});
 module.exports = {
 	addPatient,
-	getPatientByID
+	getPatientByEmail
 }
