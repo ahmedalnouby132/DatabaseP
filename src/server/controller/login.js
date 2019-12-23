@@ -1,4 +1,4 @@
-const join = require("../util/path");
+const join = require("../../util/path");
 
 const getLoginPage = (req, res) => {
   res.render(join(__dirname, "..", "views", "home.ejs"));

@@ -1,6 +1,6 @@
 const Sequelize = require("sequelize");
 
-const sequelize = require("../Database/db");
+const sequelize = require("../db");
 
 const employee = sequelize.define("employee", {
   ID: {

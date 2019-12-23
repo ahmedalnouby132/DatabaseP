@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
-
-const password = ''
+const dbPass = require('../../config/config').dbPass
+const password = dbPass
 const dbname = 'hisdb'
 const sequelize = new Sequelize(dbname, 'root', password, {
   dialect: 'mysql',

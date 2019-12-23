@@ -2,9 +2,9 @@ const express = require("express");
 
 const signupRoute = express.Router();
 
-const {getSignupPage, addMember} = require('../controller/signup')
+const {getSignupPage, register} = require('../server/controller/signup')
 
 signupRoute.get("/signup", getSignupPage);
-signupRoute.post("/signup", addMember);
+signupRoute.post("/signup", register);
 
 module.exports = signupRoute;
