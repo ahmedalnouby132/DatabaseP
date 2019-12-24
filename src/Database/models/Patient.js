@@ -19,6 +19,10 @@ const Patient = sequelize.define("patient", {
   email: Sequelize.STRING,
   SDate: Sequelize.DATE,
   BDate: Sequelize.DATE,
+  Occupation:{
+    type:Sequelize.STRING,
+    defaultValue: "PATIENT"
+  },
   pass: Sequelize.STRING
 });
 

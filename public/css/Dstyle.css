@@ -1,13 +1,11 @@
 /* CSS Document */
 
 body {
-    background-repeat: no-repeat;
-    overflow-x: hidden;
-    background-image: url("p6.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-
-
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  background-image: url("img/p1.jpg");
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 body,
@@ -37,7 +35,8 @@ html { height: 100%;}
     margin-left: -220px;
     overflow-y: auto;
     overflow-x: hidden;
-    background: #1a1a1a;
+    background: #314190 ;
+
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -109,7 +108,7 @@ html { height: 100%;}
 }
 
 .sidebar-nav li:nth-child(4):before{
-	background-color: #314190;
+	background-color: #b33c00;
 }
 
 .sidebar-nav li:nth-child(5):before{
@@ -174,8 +173,9 @@ html { height: 100%;}
 	margin: 0;
 	border-radius: 0;
 	border:none;
-	background-color: #222;
+	background-color: #4d4d4d;
 	box-shadow: none;
+
 }
 
 .custom-btn{
@@ -193,16 +193,16 @@ html { height: 100%;}
 .jumbotron{
 padding-bottom: 0px;
 padding-top: 10px;
-background-image: url("p6.jpg");
+background: url("img/p1.jpg");
 background-size: cover;
 image-resolution: from-image;
 background-repeat: no-repeat;
 background-attachment: fixed;
 
+
 }
 .jumbotron h1{
   text-align-last: center;
-  color: #ffff;
 }
 
 .sidebar-brand{
@@ -211,11 +211,11 @@ background-attachment: fixed;
 }
 
 .dolap{
-  margin-top: 20px ;
-  border: 2px ;
+margin-top:  ;
+ border:  ;
 
 
- background-image: url("p1.jpg");
+ background-image: url("img/p1.jpg");
 }
 
 .parent {
@@ -224,7 +224,6 @@ grid-template-columns: repeat(5, 1fr);
 grid-template-rows: repeat(5, 1fr);
 grid-column-gap: 10px;
 grid-row-gap: 10px;
-color: #ffff;
 }
 
 .div1 { grid-area: 1 / 1 / 5 / 3; }
@@ -238,7 +237,7 @@ color: #ffff;
   margin-right: 20px;
 }
 
-.btn1{
-
-  background-color: #52527a;
+}
+.dp{
+  color: #ffff;
 }

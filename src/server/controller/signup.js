@@ -4,22 +4,7 @@ const config = require("../../../config/config");
 const path = require("../../util/path");
 const bcrypt = require('bcryptjs')
 const getSignupPage = (req, res) => {
-  res.sendFile(path.join(path.viewsPath, "registration.html"));
-};
-const addMember = async (req, res) => {
-  try {
-    const email = req.body.email;
-    const pass = req.body.pass;
-    const SSN = req.body.ssn;
-    const Occupation = req.body.Occupation;
-    console.log(email, pass, SSN, Occupation);
-    employee.addEmployee({
-      email: "" + email,
-      pass: "" + pass,
-      SSN: "" + SSN,
-      Occupation: "" + Occupation
-    });
-  } catch (err) {}
+  res.render('registration');
 };
 
 async function register(req, res) {
@@ -32,19 +17,16 @@ async function register(req, res) {
     console.log(email, pass, SSN, Occupation);
     user = await employee.getEmployeeByEmail(req.body.email || "");
     if (user!= null) {throw Error("already registerd");}
-    console.log("1");
     user = await patient.getPatientByEmail(req.body.email || "");
-    console.log(user,"HI")
     if (user!= null) {throw Error("already registerd");}
-    console.log("2");
-    console.log(" ");
+    user = await employee.getEmployeeBySSN(req.body.ssn)
+    if (user == null) {throw Error("ssn not valid ")}
     console.log(user, "Hi");
     let password = await bcrypt.hash(pass, config.saltRounds);
-    console.log("3");
 
     if (req.Occupation != patient) {
       return employee
-        .addEmployee({
+        .updateEmployee({
           email: "" + email,
           pass: "" + password,
           SSN: "" + SSN,
@@ -67,4 +49,4 @@ async function register(req, res) {
     });
   }
 }
-module.exports = { getSignupPage, register, addMember };
+module.exports = { getSignupPage, register };

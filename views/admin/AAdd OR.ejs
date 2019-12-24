@@ -4,15 +4,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Patient List</title>
+    <title>addpatient</title>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/homepage.css">
+    <link rel="stylesheet" href="/css/Astyle.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     <div class="jumbotron">
-      <h1>Departments list</h1>
+      <h1>OR</h1>
     </div>
     <div id="wrapper">
         <div class="overlay"></div>
@@ -26,7 +26,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="homepage.html">Dashboard</a>
+                    <a href="dashboard.html">Dashboard</a>
                 </li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Department <span class="caret"></span></a>
@@ -63,6 +63,10 @@
                     <li><a href="#">schedule list</a></li>
                   </ul>
                 </li>
+
+                <li>
+                    <a href="Add OR.html">Add OR</a>
+                </li>
             </ul>
         </nav>
         <!-- /#sidebar-wrapper -->
@@ -87,55 +91,69 @@
                 </form>
               </div>
               <br>
-              <div class="panel panel-warning col-lg-14 col-lg-offset-">
-                <div class="panel-heading  col-lg-14">
-                  <div class=" panel-title row">
-                    <div class="col-lg-3"><h3>Departments list</h3>
-                    </div>
-                    <div class="col-lg-offset-10">
-                      <a href="add_department.html"class="dola btn btn-warning btn-lg">Add Department</a>     </div>
+              <div class="panel panel-warning col-lg-14">
+                <div class="panel-heading col-lg-14">
+                  <h3 class=" panel-title"><h3>Add OR</h3></h3>
+                </div>
+                      <form>
+                        <div class="row">
+                          <div class = "container dd">
+                            <div class="col-lg-8 col-sm-12">
+                          <div class="form-group row">
+                            <label class="col-sm-2 col-form-label" >OR ID </label>
+                            <div class="col-sm-10">
+                              <input type="text" class="form-control" placeholder="OR ID" required>
+                            </div>
+                          </div>
 
-                  </div>
-                  </h3>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset--1">
-                        <table class="table table-striped table-bordered table-hover table-condensed" >
-                          <tr>
-                            <th>Firstname</th>
-                            <th>Lastname</th>
-                            <th>Age</th>
-                          </tr>
-                          <tr>
-                            <td>Jill</td>
-                            <td>Smith</td>
-                            <td>50</td>
-                          </tr>
-                          <tr>
-                            <td>Eve</td>
-                            <td>Jackson</td>
-                            <td>24</td>
-                          </tr>
-                          <tr class="success">
-                            <td>John</td>
-                            <td>Doe</td>
-                            <td>34</td>
-                          </tr>
-                          <tr>
-                            <td>Stephanie</td>
-                            <td>Landon</td>
-                            <td>47</td>
-                          </tr>
-                          <tr>
-                            <td>Mike</td>
-                            <td>Johnson</td>
-                            <td>19</td>
-                          </tr>
-                        </table>
+                          <div class="form-group row">
+                            <label class="col-sm-2 col-form-label" >OR Name</label>
+                            <div class="col-sm-10">
+                              <input type="text" class="form-control" placeholder="OR Name" required>
+                            </div>
+                          </div>
+
+                          <div class="form-group row">
+                            <label  class="col-sm-2 col-form-label">Department</label>
+                            <div class="col-sm-10">
+                            <select class="form-control">
+                              <option selected disabled value="">Choose...</option>
+                              <option value="A-">Microbiology</option>
+                              <option value="B+">Neonatal</option>
+                              <option value="B-">Nephrology</option>
+                              <option value="O+">OR</option>
+                              <option value="O-">Orthopaedics</option>
+                              <option value="A+">Pharmacy</option>
+                              <option value="A+">Radiotherapy</option>
+                              <option value="A+">Rheumatology</option>
+                              <option value="A+">Gynaecology</option>
+                              <option value="A+">Obstetrics</option>
+                              <option value="A+">General Surgery</option>
+                            </select>
+                          </div>
+                          </div>
+
+                          <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Description</label>
+                            <div class="col-sm-10">
+                            <textarea class="form-control" placeholder="Add Message"></textarea>
+                          </div>
+                          </div>
+
+                          <div class=" row text-center ">
+                              <button class="btn btn-success btn-lg">save</button>
+                            <button class="btn btn-lg btn-danger ">Reset</button>
+
+                          </div>
+
+                          <br>
+                          <br> <br> <br><br><br>
+                        </div>
                     </div>
-                </div>
-              </div>
+                  </div>
+
+                          </form>
+
             </div>
         </div>
         <!-- /#page-content-wrapper -->
@@ -146,7 +164,7 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <script src="/js/script.js"></script>
 
 
 

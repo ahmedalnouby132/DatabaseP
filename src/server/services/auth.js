@@ -15,18 +15,23 @@ const authenticate = async params => {
     } else {
       user = await Patient.getPatientByEmail(params.email);
     }
+    console.log(params)
+
+    console.log(user)
     if (!user) {
       throw Error("no employee");
     }
     let isVerified = await bcrypt.compare(params.pass || "", user.pass);
+    console.log(isVerified)
     if (isVerified == false) {
       throw Error("wrong password");
     }
     const payload = {
       id: user.id,
+      Occupation:user.Occupation,
       time: new Date()
     };
-    var token = await jwt.sign(payload, jwtSecret, {
+    var token = jwt.sign(payload, jwtSecret, {
       expiresIn: ExpireTime
     });
     let tokenObj = await addToken({
@@ -36,7 +41,10 @@ const authenticate = async params => {
       isEmployee
     });
     return tokenObj;
-  } catch (error) {}
+  } catch (error) {
+    return null
+
+  }
 };
 
 module.exports = authenticate;

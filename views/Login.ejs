@@ -8,7 +8,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
   <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-  <link rel="stylesheet" type="text/css" href="./css/loging.css">
+  <link rel="stylesheet" type="text/css" href="/css/styleL.css">
 </head>
 <body>
 
@@ -16,31 +16,30 @@
   <div class="co-sm-8 main-section">
     <div class="modal-content">
       <div class="col-12 user-img">
-        <img src="img/face.png" alt="">
-        <form class="col-12">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Enter Username">
+        <img src="/img/p2.png" alt="">
+        <form class="col-12" method="POST" action="">
+          <div class="form-group" >
+            <input type="email" name="email" class="form-control" placeholder="Enter Username">
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Enter Password">
+            <input type="password" name="pass" class="form-control" placeholder="Enter Password">
           </div>
 
           <div class=" row dp">
             <label  class="col-sm-3">Status</label>
             <div class="col-sm-8">
-            <form>
-              <input class="col-sm-1" type="radio" name="gender" value="male" checked>
+            input
+              <input class="col-sm-1" type="radio" name="Occupation" value="Employee" checked>
               <span class="col-sm-1">Patient</span>
-              <input class="col-sm-2"type="radio" name="gender" value="female">
+              <input class="col-sm-2"type="radio" name="Occupation" value="Patient">
               <span class="col-sm-1">Employee</span>
 
+              <br>
+            <button type="submit" class="btn"><i class="fas fa-sign-in-alt"></i>Login </button>
             </form>
           </div>
           </div>
 
-          <br>
-        <button type="submit" class="btn"><i class="fas fa-sign-in-alt"></i>Login </button>
-        </form>
 
         <div class="col-12 forgot">
           <a href="#">Forgot Password</a>

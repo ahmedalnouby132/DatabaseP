@@ -3,7 +3,7 @@ const authenticate = require("../services/auth");
 const session = require('express-session')
 
 const getLoginPage = (req, res) => {
-  res.render(path.join(path.viewsPath, "home.ejs"));
+  res.render(path.join(path.viewsPath, "home"));
 };
 
 const Login = async (req, res) => {

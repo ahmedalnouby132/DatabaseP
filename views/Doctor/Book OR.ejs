@@ -12,7 +12,7 @@
   </head>
   <body>
     <div class="jumbotron">
-      <h1>Add Patient.</h1>
+      <h1>OR</h1>
     </div>
     <div id="wrapper">
         <div class="overlay"></div>
@@ -83,105 +83,85 @@
               <br>
               <div class="panel panel-primary col-lg-14">
                 <div class="panel-heading  col-lg-14">
-                  <h3 class="panel-title"><h3>Add patient</h3></h3>
+                  <h3 class="panel-title"><h3>Book OR</h3></h3>
                 </div>
                 <br><br>
                 <div class="row ">
                     <div class="col-sm-offset-1 col-lg-9">
                         <form>
                           <div class="form-group row">
-                            <label class="col-sm-2 col-form-label" >First Name</label>
+                            <label class="col-sm-2 col-form-label" >Patient ID</label>
                             <div class="col-sm-10">
-                              <input type="text" class="form-control" placeholder="First Name" required>
+                              <input type="text" class="form-control" placeholder="Patient ID" required>
                             </div>
                           </div>
                           <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Last Name</label>
+                            <label class="col-sm-2 col-form-label">Department</label>
                             <div class="col-sm-10">
-                              <input type="text" class="form-control" placeholder="Last Name" required>
+                              <input type="text" class="form-control" selected disabled value="Department ID" required>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label  class="col-sm-2 col-form-label">Room</label>
+                            <div class="col-sm-10">
+                            <select class="form-control">
+                              <option selected disabled value="">Choose Room...</option>
+                              <option value="room1">room1</option>
+                              <option value="room2">room2</option>
+                              <option value="room3">room3</option>
+
+                            </select>
+                          </div>
+                          </div>
+
+                          <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Date</label>
+                            <div class="col-sm-2">
+                            <input class="col-sm-" type="date" name="BirthDate" value="data" lang="en">
+                            </div>
+                            <label class="col-sm-1 col-form-label">From</label>
+                            <div class="col-sm-2">
+                            <input type="time" class="form-control" placeholder="" required>
+                            </div>
+                            <label class="col-sm-1 col-form-label">To</label>
+                            <div class="col-sm-2">
+                            <input type="time" class="form-control" placeholder="" required>
                             </div>
                           </div>
 
                           <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Email</label>
+                            <label class="col-sm-2 col-form-label">Nurses</label>
                             <div class="col-sm-10">
-                            <input type="email" class="form-control" placeholder="Email Address" required>
+                              <label class="col-sm-2 col-form-label">Nurse1</label>
+                              <input class="col-sm-1" type="checkbox" name="" value="">
+                              <label class="col-sm-2 col-form-label">Nurse2</label>
+                              <input class="col-sm-1" type="checkbox" name="" value="">
+                              <label class="col-sm-2 col-form-label">Nurse3</label>
+                              <input class="col-sm-1" type="checkbox" name="" value="">
+                              <label class="col-sm-2 col-form-label">Nurse4</label>
+                              <input class="col-sm-1" type="checkbox" name="" value="">
+                              <label class="col-sm-2 col-form-label">Nurse5</label>
+                              <input class="col-sm-1" type="checkbox" name="" value="">
+                              <label class="col-sm-2 col-form-label">Nurse6</label>
+                              <input class="col-sm-1" type="checkbox" name="" value="">
+                              <label class="col-sm-2 col-form-label">Nurse7</label>
+                              <input class="col-sm-1" type="checkbox" name="" value="">
+                              <label class="col-sm-2 col-form-label">Nurse8</label>
+                              <input class="col-sm-1" type="checkbox" name="" value="">
                             </div>
                           </div>
+
                           <div class="form-group row">
                             <label class="col-sm-2 col-form-label">Password</label>
                             <div class="col-sm-10">
                               <input type="password" class="form-control" placeholder="password" required>
                             </div>
                           </div>
-                          <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Phone No</label>
-                            <div class="col-sm-10">
-                              <input type="tel" class="form-control" placeholder="Phone Number" pattern="[0-9]">
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Mobile No</label>
-                            <div class="col-sm-10">
-                              <input type="tel" class="form-control" placeholder="Mobile Noumber" pattern="[0-9]">
-                            </div>
-                          </div>
-                          <div class="form-group row">
-                            <label  class="col-sm-2 col-form-label">Blood Group</label>
-                            <div class="col-sm-10">
-                            <select class="form-control">
-                              <option selected disabled value="">Choose...</option>
-                              <option value="A+">A+</option>
-                              <option value="A-">A-</option>
-                              <option value="B+">B+</option>
-                              <option value="B-">B-</option>
-                              <option value="O+">O+</option>
-                              <option value="O-">O-</option>
-                            </select>
-                          </div>
-                          </div>
 
-                          <div class="form-group row">
-                            <label  class="col-sm-2 col-form-label">Gender</label>
-                            <div class="col-sm-10">
-                            <form>
-                              <input class="col-sm-1" type="radio" name="gender" value="male" checked>
-                              <span class="col-sm-1">Male</span>
-                              <input class="col-sm-2"type="radio" name="gender" value="female">
-                              <span class="col-sm-1">Female</span>
-                              <input class="col-sm-3"type="radio" name="gender" value="other">
-                              <span>Other(hahaha)</span>
-                            </form>
-                          </div>
-                          </div>
-                          <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Birth Date</label>
-                            <div class="col-sm-10">
-                              <input class="col-sm-3" type="date" name="BirthDate" value="data" lang="en"><span class="col-sm-5 help-block">12/12/2012</span>
-                            </div>
-                          </div>
+                          <div class=" row text-center ">
+                              <button class="btn btn-success btn-lg">Confirm</button>
+                            <button class="btn btn-lg btn-danger ">Reset</button>
 
-                          <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Upload File</label>
-                            <div class="col-sm-10">
-                            <input  type="file">
-                          </div>
-                          </div>
-
-                          <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Message</label>
-                            <div class="col-sm-10">
-                            <textarea class="form-control" placeholder="Add Message"></textarea>
-                          </div>
-                          </div>
-
-                          <div class="col-sm-10">
-                            <div class="col-sm-6">
-                              <button class="btn btn-success btn-lg">save</button>
-                            </div>
-                          <div class="col-sm col-sm-offset-12">
-                            <button class="btn btn-danger ">Reset</button>
-                          </div>
                           </div>
 
                           <br>

@@ -1,12 +1,10 @@
 /* CSS Document */
 
 body {
-    background-repeat: no-repeat;
+    position: relative;
     overflow-x: hidden;
-    background-image: url("p6.jpg");
+    background-image: url("/img/rrr.jpg");
     background-size: cover;
-    background-attachment: fixed;
-
 
 }
 
@@ -37,7 +35,7 @@ html { height: 100%;}
     margin-left: -220px;
     overflow-y: auto;
     overflow-x: hidden;
-    background: #1a1a1a;
+    background: #99ff99;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -87,7 +85,7 @@ html { height: 100%;}
     z-index: -1;
     height: 100%;
     width: 3px;
-    background-color: #1c1c1c;
+    background-color: #99ff99;
     -webkit-transition: width .2s ease-in;
       -moz-transition:  width .2s ease-in;
        -ms-transition:  width .2s ease-in;
@@ -98,7 +96,7 @@ html { height: 100%;}
 
 .sidebar-nav li:first-child a{
 	color: white;
-	background-color: #1a1a1a;
+	background-color: #99ff99;
 }
 
 .sidebar-nav li:nth-child(2):before{
@@ -143,7 +141,7 @@ html { height: 100%;}
 
 .sidebar-nav li a{
 	display: block;
-	color: #ddd;
+	color: black;
 	text-decoration: none;
 	padding: 10px 15px 10px 30px;
 }
@@ -154,7 +152,7 @@ html { height: 100%;}
 .sidebar-nav li.open a:hover,
 .sidebar-nav li.open a:active,
 .sidebar-nav li.open a:focus{
-	color: #fff;
+	color:white;
 	text-decoration: none;
 	background-color: transparent;
 }
@@ -174,35 +172,33 @@ html { height: 100%;}
 	margin: 0;
 	border-radius: 0;
 	border:none;
-	background-color: #222;
+	background-color: #99ff99;
 	box-shadow: none;
 }
 
 .custom-btn{
 	margin-left: 15px;
 	color: white;
-	background-color: dimgray;
+	background-color: #99ff99 ;
   position: fixed;
 }
 .custom-btn:hover{
 	margin-left: 15px;
-	color: red;
-	background-color: black;
+	color: black;
+	background-color: #99ff99;
 }
 
 .jumbotron{
 padding-bottom: 0px;
 padding-top: 10px;
-background-image: url("p6.jpg");
+background-image: url("/img/rrr.jpg");
 background-size: cover;
 image-resolution: from-image;
-background-repeat: no-repeat;
-background-attachment: fixed;
+
 
 }
 .jumbotron h1{
   text-align-last: center;
-  color: #ffff;
 }
 
 .sidebar-brand{
@@ -211,34 +207,9 @@ background-attachment: fixed;
 }
 
 .dolap{
-margin-top: 20px ;
- border: 2px ;
+margin-top:  ;
+ border:  ;
 
 
- background-image: url("p1.jpg");
-}
-
-.parent {
-display: grid;
-grid-template-columns: repeat(5, 1fr);
-grid-template-rows: repeat(5, 1fr);
-grid-column-gap: 10px;
-grid-row-gap: 10px;
-color: #ffff;
-}
-
-.div1 { grid-area: 1 / 1 / 5 / 3; }
-.div2 { grid-area: 5 / 1 / 6 / 3; }
-.div3 { grid-area: 1 / 3 / 3 / 5; }
-.div4 { grid-area: 3 / 3 / 5 / 5; }
-.div5 { grid-area: 5 / 3 / 6 / 5; }
-
-.noby{
-
-  margin-right: 20px;
-}
-
-.btn1{
-
-  background-color: #52527a;
+ background-image: url("/img/rrr.jpg");
 }

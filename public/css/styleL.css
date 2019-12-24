@@ -6,7 +6,7 @@
 body{
 
   font-family: 'Roboto',sans-serif;
-  background: url(img/mountain.jpg) no-repeat center center fixed;
+  background: url("/img/p1.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -22,7 +22,6 @@ body{
   opacity: 0.9;
   padding: 0 18px;
   box-shadow: 0px 0px 3px #8484B4;
-  box-sizing: content-box;
 }
 
 .user-img{
@@ -35,19 +34,20 @@ height: 100px;
 width: 100px;
 border-radius: 10px;
 box-shadow: 0px 0px 3px #8484B4;
+background-color: #ffff;
 }
 
 .form-group {
-margin-bottom: 0;
+margin-bottom: 25px;
 }
 .form-group input{
   height: 42px;
   border-radius: 10px;
   border: 0;
   font-size: 18px;
-  padding-left: 2px;
+  padding-left: 50px;
 }
-/*
+
 .form-group::before{
  font-family: 'font awesome\ 5 Free';
  content: "\f007";
@@ -57,7 +57,7 @@ margin-bottom: 0;
  padding-top: 3px;
  opacity: .7
 }
-*/
+
 .form-group:last-of-type::before{
 content: "\f023";
 }
@@ -86,12 +86,6 @@ content: "\f023";
 .forgot a{
   color: #c2fbfe;
 }
-.dola{
-  font-size: 20px;
-  font-style: normal;
-  font-weight: bold;
-  color: #ffffff;
-}
-.dola2{
-  color: #ffffff;
+.dp{
+  color: #ffff;
 }
